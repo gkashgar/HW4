@@ -176,7 +176,7 @@ L count: mean 0.0 sd 0.0
 	module load gnuplot/4.6.0
 
 	###Query and Reference Assignment. State my 	prefix for output filenames
-	REF="/data/users/bcraver/myrepos/HW4/assembly/	unitigs.fa"
+	REF="/data/users/gkashgar/myrepos/HW4/geno/ unitigs.fa"
 	PREFIX="flybase"
 	SGE_TASK_ID=1
 	QRY=$(ls /pub/jje/ee282/bcraver/nanopore_assembly/nanopore_assembly/data/processed/	unitigs.fa | head -n $SGE_TASK_ID | tail -n 1)
@@ -228,7 +228,7 @@ L count: mean 0.0 sd 0.0
 	source /pub/jje/ee282/bin/.buscorc
 
 	INPUTTYPE="geno"
-	MYLIBDIR="/data/users/bcraver/busco/lineages/"
+	MYLIBDIR="/data/users/gkashgar/busco/lineages/"
 	MYLIB="diptera_odb9"
 	OPTIONS="-l ${MYLIBDIR}${MYLIB}"
 	##OPTIONS="${OPTIONS} -sp 4577"
