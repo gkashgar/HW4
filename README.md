@@ -80,7 +80,7 @@ L count: mean 0.0 sd 0.0
 6. Add Length Header   
 `echo $'Length' | cat - sortlength.txt > sortlengthhead.txt` 
 
-###Generating Sequence Length Distribution Plot  
+### Generating Sequence Length Distribution Plot  
   	library(ggplot2)
 
 	lengthdistribution <-	read.table("shorter_sort.txt", header = TRUE)
@@ -100,7 +100,7 @@ L count: mean 0.0 sd 0.0
 4. shows answer	 
 `less GCsort.txt`	
 
-###Generating Sequence GC% Distribution Plot
+### Generating Sequence GC% Distribution Plot
 
 	library(ggplot2) 
 	GCDistribution = read.table("GCsort.txt")  
@@ -108,7 +108,7 @@ L count: mean 0.0 sd 0.0
 	GCD + geom_histogram(mapping = aes(x=V1), binwidth = 0.01) + ggtitle("Sequence GC% Distribution") + xlab("Sequence GC Content (%)")
 	ggsave("SeqGCDis.png", width = 6, height = 6)	
 
-###Generating CDF File
+### Generating CDF File
 
 1. Adds Dmel Assembly ID  
 `bioawk '{print $1 "\t Dmel"}' < sortlength.txt > CDF.txt` 
@@ -119,6 +119,11 @@ L count: mean 0.0 sd 0.0
 3. create CDF from file with headers Length and Assembly  
 `plotCDF2 CDFHead.txt GenomeCDF.png`  
 
+### Comments on "Summarize partitions of a genome assembly"
+
+Excellent. One tiny suggestion: Next time, embed your figures directly into the markdown. It makes it a lot easier to see everything. Otherwise, perfect.
+
+Also, please differentiate your homework assignment from your lab partner's. You're welcome to work together, but please try to compose independent answers.
 
 # Genome assembly  
 ##### Assemble a genome from MinION reads1.   
